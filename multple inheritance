@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+// Base class 1
+class Shape {
+public:
+    void displayShape() {
+        cout << "This is a shape." << endl;
+    }
+};
+
+// Base class 2
+class Color {
+public:
+    void displayColor() {
+        cout << "This shape has a color." << endl;
+    }
+};
+
+// Derived class inheriting from Shape and Color
+class Circle : public Shape, public Color {
+public:
+    void displayCircle() {
+        cout << "This is a circle." << endl;
+    }
+};
+
+int main() {
+    Circle circle;
+    circle.displayShape();  // Accessing method from Shape
+    circle.displayColor();  // Accessing method from Color
+    circle.displayCircle(); // Accessing method from Circle
+    return 0;
+}
